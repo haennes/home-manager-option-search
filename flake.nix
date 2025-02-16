@@ -30,5 +30,12 @@
           ];
         };
       });
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = (pkgsForSystem system);
+        in
+        pkgs.nixfmt-rfc-style
+      );
     };
 }
