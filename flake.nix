@@ -30,5 +30,10 @@
           ];
         };
       });
+
+      nixosModules = rec {
+        default = import ./module.nix { inherit self forAllSystems; };
+        home-manager-option-search = default;
+      };
     };
 }
